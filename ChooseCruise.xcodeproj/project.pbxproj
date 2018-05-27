@@ -12,7 +12,33 @@
 		BF4BB48A20B8FB9100DF3D19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4BB48820B8FB9100DF3D19 /* Main.storyboard */; };
 		BF4BB48C20B8FB9200DF3D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4BB48B20B8FB9200DF3D19 /* Assets.xcassets */; };
 		BF4BB48F20B8FB9200DF3D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4BB48D20B8FB9200DF3D19 /* LaunchScreen.storyboard */; };
+		BF60883D20BA535800434794 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60883C20BA535800434794 /* IntentHandler.swift */; };
+		BF60884120BA535800434794 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BF60883A20BA535800434794 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF60883F20BA535800434794 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4BB47920B8FB9100DF3D19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF60883920BA535800434794;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF60884520BA535800434794 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BF60884120BA535800434794 /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BF4BB48120B8FB9100DF3D19 /* ChooseCruise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChooseCruise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,20 @@
 		BF4BB48B20B8FB9200DF3D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF4BB48E20B8FB9200DF3D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4BB49020B8FB9200DF3D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF60883A20BA535800434794 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF60883C20BA535800434794 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		BF60883E20BA535800434794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BF4BB47E20B8FB9100DF3D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF60883720BA535800434794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4BB48320B8FB9100DF3D19 /* ChooseCruise */,
+				BF60883B20BA535800434794 /* Extension */,
 				BF4BB48220B8FB9100DF3D19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4BB48120B8FB9100DF3D19 /* ChooseCruise.app */,
+				BF60883A20BA535800434794 /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +102,15 @@
 			path = ChooseCruise;
 			sourceTree = "<group>";
 		};
+		BF60883B20BA535800434794 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF60883C20BA535800434794 /* IntentHandler.swift */,
+				BF60883E20BA535800434794 /* Info.plist */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +121,34 @@
 				BF4BB47D20B8FB9100DF3D19 /* Sources */,
 				BF4BB47E20B8FB9100DF3D19 /* Frameworks */,
 				BF4BB47F20B8FB9100DF3D19 /* Resources */,
+				BF60884520BA535800434794 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BF60884020BA535800434794 /* PBXTargetDependency */,
 			);
 			name = ChooseCruise;
 			productName = ChooseCruise;
 			productReference = BF4BB48120B8FB9100DF3D19 /* ChooseCruise.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BF60883920BA535800434794 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF60884420BA535800434794 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				BF60883620BA535800434794 /* Sources */,
+				BF60883720BA535800434794 /* Frameworks */,
+				BF60883820BA535800434794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = BF60883A20BA535800434794 /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +161,9 @@
 				ORGANIZATIONNAME = "Amanda Reinhard";
 				TargetAttributes = {
 					BF4BB48020B8FB9100DF3D19 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					BF60883920BA535800434794 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
@@ -113,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				BF4BB48020B8FB9100DF3D19 /* ChooseCruise */,
+				BF60883920BA535800434794 /* Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +198,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF60883820BA535800434794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +217,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF60883620BA535800434794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF60883D20BA535800434794 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF60884020BA535800434794 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF60883920BA535800434794 /* Extension */;
+			targetProxy = BF60883F20BA535800434794 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BF4BB48820B8FB9100DF3D19 /* Main.storyboard */ = {
@@ -279,6 +372,7 @@
 		BF4BB49420B8FB9200DF3D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ADP3UVM5F;
@@ -297,6 +391,7 @@
 		BF4BB49520B8FB9200DF3D19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ADP3UVM5F;
@@ -307,6 +402,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amreinhard.ChooseCruise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF60884220BA535800434794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ADP3UVM5F;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amreinhard.ChooseCruise.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF60884320BA535800434794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ADP3UVM5F;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.amreinhard.ChooseCruise.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +462,15 @@
 			buildConfigurations = (
 				BF4BB49420B8FB9200DF3D19 /* Debug */,
 				BF4BB49520B8FB9200DF3D19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF60884420BA535800434794 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF60884220BA535800434794 /* Debug */,
+				BF60884320BA535800434794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
